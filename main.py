@@ -87,7 +87,7 @@ async def schedule_endpoint(request: Request,
 
     # Format the response
     if valid_slots:
-        response = f'The first two available time slots are: {valid_slots}.'
+        response = f'The available time slots for this day are: {sorted_slots}.'
     else:
         response = 'There are no available time slots. Could you please suggest another day?'
     return {"message": response}
